@@ -13,3 +13,14 @@ airflow.db
 .astro/*.local.yml
 .astro/*.local.yaml
 test_api.py 
+
+# NammaMart assignment: never commit the warehouse (raw_customers holds unmasked PII)
+include/warehouse_*.duckdb
+include/warehouse_*.duckdb.wal
+include/warehouse.duckdb
+# quarantine files keep rejected rows as received, including customer email/phone
+include/quarantine/ashwani/
+# per-run scratch files passed between ETL tasks
+include/tmp/
+.pytest_cache/
+*.zip
